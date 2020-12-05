@@ -7,13 +7,24 @@
     <title>Site Name</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://bootswatch.com/4/slate/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand navbar-light sticky-top">
         <a href="index.html" class="navbar-brand">Site Name</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Site functions
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="index.html">Home Page</a>
+                <a class="dropdown-item" href="colors.html">Color Picker</a>
+                <a class="dropdown-item" href="frames.html">Frame Arranger</a>
+            </div>
+        </div>
         <div class="navbar-nav ml-auto">
             <li class="nav-item active">
                 <a href="colors.html" class="nav-link" data-toggle="tooltip" data-placement="bottom"
@@ -31,10 +42,20 @@
     <div class="container-fluid mb-5 mt-5">
         <div class="row mb-5">
 
-            <!-- Color Wheel -->
+            <!-- Color Picker -->
             <div class="col-lg-4">
                 <h3 class="text-center">Your Wall Color</h3>
-                <img class="col-lg-10 offset-lg-1 mt-3 mb2" src="images/color-wheel.png">
+                <div class="text-center pt-5">
+                    <div>
+                        <input type="color" id="wall_color_1" name="wall_color_1" value="#FFFFFF">
+                        <label for="color_1"> Color 1</label>
+                    </div>
+
+                    <div>
+                        <input type="color" id="wall_color_2" name="wall_color_2" value="#FFFFFF">
+                        <label for="color_2"> Color 2</label>
+                    </div>
+                </div>
             </div>
 
             <!-- Color Matcher Input -->
@@ -68,6 +89,20 @@
         <footer>
             <div class="bg-secondary p-3">&copy; 2020 Site Name</div>
         </footer>
+
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDT0WdwSf2hDEwUoavMTkmTvpcMnNZt018&callback=initMap">
+            </script>
 </body>
 
 </html>
